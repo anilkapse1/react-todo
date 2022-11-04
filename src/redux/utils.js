@@ -1,0 +1,10 @@
+export const ADD_TODO = "ADD_TODO";
+export const DELETE_TODO = `DELETE_TODO`;
+export const TOGGLE_COMPLETED = "TOGGLE_COMPLETED";
+export const TOGGLE_IMPORTANT = "TOGGLE_IMPORTANT";
+export const EDIT_TODO = "EDIT_TODO";
+export const REMOVE_EDITID="REMOVE_EDITID";
+export const ADD_EDIT_TODO="ADD_EDIT_TODO";
+
+
+
