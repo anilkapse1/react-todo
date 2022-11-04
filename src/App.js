@@ -34,7 +34,7 @@ const App = () => {
             <IconButton edge="start" color="inherit">
               {/* <img src="logo.png" alt="user logo" style={{ width: "40%" }} /> */}
               <Typography variant="h4" style={{ marginLeft: "20px" }}>
-                It's my Todo
+                ToDo for a Day:
               </Typography>
             </IconButton>
           </Toolbar>
