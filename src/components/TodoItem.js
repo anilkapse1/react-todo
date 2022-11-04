@@ -1,12 +1,11 @@
 import {
-    Button,
     Checkbox,
     FormControlLabel,
     FormGroup,
     IconButton,
     ListItem
   } from "@material-ui/core";
-  import React, { useEffect } from "react";
+  import React from "react";
   import { useDispatch } from "react-redux";
   import DeleteIcon from "@material-ui/icons/Delete";
   import EditIcon from "@material-ui/icons/Edit";

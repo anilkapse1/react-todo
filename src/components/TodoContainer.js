@@ -9,7 +9,6 @@ import {
   
   import React from "react";
   import { useSelector } from "react-redux";
-  import { todos } from "../redux/initial-state";
   import TodoItem from "./TodoItem";
   
   const useStyles = makeStyles((theme) => ({
