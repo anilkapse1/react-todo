@@ -13,6 +13,7 @@ import TodoContainer from "./components/TodoContainer";
 import { useSelector } from "react-redux";
 import Badge from '@mui/material/Badge';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -33,17 +34,31 @@ const App = () => {
     return state.todoreducer;
   })
 
+  let list;
+    if(totalList.length > 0){
+      list =
+        <Badge badgeContent={totalList.length} color="primary">
+        <FormatListBulletedIcon/>
+      </Badge>
+      
+    }else{
+      list= 
+      <HourglassEmptyIcon/>
+    }
+  
+
   return (
     <React.Fragment>
       <div>
         <AppBar>
           <Toolbar>
               <Typography variant="h4" style={{ marginLeft: "20px",marginRight:'10px' }}>
-                ToDo or a Day:
+                ToDo for a Day:
               </Typography>
-              <Badge badgeContent={totalList.length} color="primary">
-                <FormatListBulletedIcon/>
-              </Badge>
+              {
+                list           
+              }
+              
           </Toolbar>
         </AppBar>
 
