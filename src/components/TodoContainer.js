@@ -47,7 +47,7 @@ import {
         <Grid container spacing={2}>
           <Grid item xs={6}>
             <Typography variant="h5" gutterBottom style={{ textAlign: "left" }}>
-              Todo list
+              ToDo list
             </Typography>
             <Divider />
             <List>
@@ -62,7 +62,7 @@ import {
           </Grid>
           <Grid item xs={6}>
             <Typography variant="h5" gutterBottom style={{ textAlign: "left" }}>
-              completed
+              Completed
             </Typography>
             <Divider />
             <List>

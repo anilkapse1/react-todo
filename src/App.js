@@ -10,6 +10,9 @@ import {
 } from "@material-ui/core";
 import TodoAdder from "./components/TodoAdder";
 import TodoContainer from "./components/TodoContainer";
+import { useSelector } from "react-redux";
+import Badge from '@mui/material/Badge';
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -26,17 +29,21 @@ const useStyles = makeStyles((theme) => ({
 
 const App = () => {
   const classes = useStyles();
+  const totalList = useSelector((state)=>{
+    return state.todoreducer;
+  })
+
   return (
     <React.Fragment>
       <div>
         <AppBar>
           <Toolbar>
-            <IconButton edge="start" color="inherit">
-              {/* <img src="logo.png" alt="user logo" style={{ width: "40%" }} /> */}
-              <Typography variant="h4" style={{ marginLeft: "20px" }}>
-                ToDo for a Day:
+              <Typography variant="h4" style={{ marginLeft: "20px",marginRight:'10px' }}>
+                ToDo or a Day:
               </Typography>
-            </IconButton>
+              <Badge badgeContent={totalList.length} color="primary">
+                <FormatListBulletedIcon/>
+              </Badge>
           </Toolbar>
         </AppBar>
 
