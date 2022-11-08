@@ -39,7 +39,7 @@ const App = () => {
         <AppBar>
           <Toolbar>
               <Typography variant="h4" style={{ marginLeft: "20px",marginRight:'10px' }}>
-                ToDo or a Day:
+                ToDo for a Day:
               </Typography>
               <Badge badgeContent={totalList.length} color="primary">
                 <FormatListBulletedIcon/>
