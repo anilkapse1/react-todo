@@ -14,6 +14,8 @@ import { useSelector } from "react-redux";
 import Badge from '@mui/material/Badge';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
+import img1 from './assets/images/empty.png';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -34,6 +36,8 @@ const App = () => {
     return state.todoreducer;
   })
 
+
+
   let list;
     if(totalList.length > 0){
       list =
@@ -46,6 +50,12 @@ const App = () => {
       <HourglassEmptyIcon/>
     }
   
+    let visible;
+    if(totalList.length>0){
+      visible = <TodoContainer />
+    }else{
+      visible=<img src={img1} alt="demo" style={{width:'40%'}}/>;
+    }
 
   return (
     <React.Fragment>
@@ -65,7 +75,10 @@ const App = () => {
         <Container className={classes.appContainer}>
           <Paper className={classes.wrapper} elevation={0}>
             <TodoAdder />
-            <TodoContainer />
+            {
+              visible
+            }
+            
           </Paper>
         </Container>
       </div>
